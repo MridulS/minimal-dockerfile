@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 RUN apt-get update && apt-get install -y \
-    curl \
+    python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
 # install the notebook package
