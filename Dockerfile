@@ -4,9 +4,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # install the notebook package
-RUN pip install --default-timeout=100 --no-cache --upgrade pip && \
-    pip install networkx && \
-    pip install --default-timeout=100 --no-cache notebook jupyterlab
+RUN pip3 install --default-timeout=100 --no-cache --upgrade pip && \
+    pip3 install networkx && \
+    pip3 install --default-timeout=100 --no-cache notebook jupyterlab
 
 # create user with a home directory
 ARG NB_USER
