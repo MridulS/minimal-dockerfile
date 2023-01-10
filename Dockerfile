@@ -1,6 +1,7 @@
 FROM python:3.9-slim
 # install the notebook package
 RUN pip install --default-timeout=100 --no-cache --upgrade pip && \
+    pip install networkx && \
     pip install --default-timeout=100 --no-cache notebook jupyterlab
 
 # create user with a home directory
