@@ -1,4 +1,8 @@
-FROM python:3.9-slim
+FROM ubuntu:22.04
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
 # install the notebook package
 RUN pip install --default-timeout=100 --no-cache --upgrade pip && \
     pip install networkx && \
